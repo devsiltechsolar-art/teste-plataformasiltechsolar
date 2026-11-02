@@ -88,7 +88,7 @@ valorFinalNegociacao.textContent = formatarMoeda(proposta.valorFinalProposta)
    function inserirValorMcs() {
 
     const valorOriginal = Number(proposta.valorFinalProposta);
-    const margemOriginal = 42;
+    const margemOriginal = 50;
     const custo = valorOriginal * (1 - margemOriginal / 100);
 
     const novoValor = Number(proposta.valorNegociado);
