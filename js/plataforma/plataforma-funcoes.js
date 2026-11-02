@@ -1,4 +1,4 @@
-const contribuicao = 0.42
+const contribuicao = 0.50
 const comissao = 0.05
 const impostos = 0.06
 const retorno = 550
