@@ -68,7 +68,7 @@
       </div>
     </div>
     <main class="main-plataforma">
-      <section class="screen-proposta showGrid " id="section-proposta">
+      <section class="screen-proposta  showGrid" id="section-proposta">
         <article class="card-proposta-cliente">
           <div class="header-card-container">
             <i class="bi bi-people icon-header-card"></i>
@@ -157,7 +157,7 @@
                   <option value="" class="option-select">Selecione</option>
                   <option value="575Wp Tier 1">575Wp Tier 1</option>
                   <option value="585Wp Tier 1">585Wp Tier 1</option>
-                  <option value="610Wp Tier 1">610Wp Tier 1</option>
+                  <option value="615Wp Tier 1">615Wp Tier 1</option>
                   <option value="700Wp Tier 1">700Wp Tier 1</option>
                 </select>
               </div>
@@ -474,8 +474,8 @@
           </div>  
           <div class="card-resumo-info validar-sdr">
                   <i class="bi-receipt text-title color-third"></i>
-                    <p class="text-normal color-text-first i">Custo Equipamento</p>
-                    <p id="custo-equipamento-resumo-proposta"class="text-normal color-first font-hard limpar-proposta">-</p>
+                    <p class="text-normal color-text-first i">Custo Kit Gerador</p>
+                    <p id="custo-kit-gerador-resumo-proposta"class="text-normal color-first font-hard limpar-proposta">-</p>
                   
           </div>
           <div class="card-resumo-info">
@@ -534,17 +534,370 @@
       </section>
       <section class="screen-dashboard  hidden" id="section-dashboard" >
 
-       <article class="card-dashboard">
+       <!-- <article class="card-dashboard">
        
          
               <iframe src="https://datastudio.google.com/embed/reporting/4dfb62b5-8a87-419c-a803-e86bd3d439c5/page/p_il93qf3r2d" class="dashboard-datastudio"></iframe>
             
-       </article>
+       </article> -->
 
         
        
       </section>
-      <section class="screen-lancamento    " id="section-lancamento">
+      <section class="screen-negociacao " id="section-negociacao">
+          <article class="card-negociacao-informacao">
+            <div class="header-card-container gap-high">
+                <i class="bi bi-info icon-header-card"></i>
+                <p class="text-small color-text-first">ETAPA 1</p>
+                <div class="wall-vertical hei-80"></div>
+                <h3 class="text-title color-first">Informação da Proposta</h3>
+            </div>
+            <div class="main-card-negociacao">
+              <div class="card-negociacao-valor gap-small">
+                  <i class="bi bi-person icon-title color-third text-title"></i>
+                  <p class="text-normal color-black">Cliente</p>
+                  <p class="text-normal color-first font-hard" id="cliente-negociacao-proposta">-</p>
+                </div>
+                <div class="wall-vertical hei-60"></div>
+                <div class="card-negociacao-valor gap-small">
+                  <i class="bi bi-calendar icon-title color-third text-title"></i>
+                  <p class="text-normal color-black">Data</p>
+                  <p class="text-normal color-first font-hard" id="data-negociacao-proposta">-</p>
+                </div>
+                <div class="wall-vertical hei-60"></div>
+                
+                <div class="card-negociacao-valor gap-small">
+                  <i class="bi bi-layers icon-title color-third text-title"></i>
+                  <p class="text-normal color-black">Placas</p>
+                  <p class="text-normal color-first font-hard" id="placas-negociacao-proposta">-</p>
+                </div>
+                <div class="wall-vertical hei-60"></div>
+                <div class="card-negociacao-valor gap-small">
+                  <i class="bi bi-plug icon-title color-third text-title"></i>
+                  <p class="text-normal color-black">Inversor</p>
+                  <p class="text-normal color-first font-hard" id="inversor-negociacao-proposta">-</p>
+                </div>
+                <div class="wall-vertical hei-60"></div>
+                <div class="card-negociacao-valor gap-small">
+                  <i class="bi bi-cash icon-title color-third text-title"></i>
+                  <p class="text-normal color-black">Valor da Proposta</p>
+                  <p class="text-normal color-first font-hard"id="valor-final-negociacao-proposta">-</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card-negociacao-desconto">
+            <div class="header-card-container">
+                <i class="bi bi-suitcase-lg icon-header-card"></i>
+                <p class="text-small color-text-first">ETAPA 2</p>
+                <div class="wall-vertical hei-80"></div>
+                <h3 class="text-title color-first">Negociação</h3>
+            </div>
+            <div class="main-card-negociacao">
+             
+              <div class="container-pay wid-50 f-direction-collum ">
+                <div class="container-input">
+                  <label for="valor-pagamento-1" class="label color-text-first">Valor Negociado</label>
+                  <div class="container-input-general">
+                    <div class="container-icon">
+                      <i class="bi bi-wallet2 text-title color-third"></i>
+                    </div>
+                    <input type="text" id="valor-negociado-proposta" class="input-general" placeholder="Informe o novo valor negociado">
+                  </div>
+                </div>
+              </div>
+              <div class="wall-vertical hei-60"></div>
+              <div class="container-pay wid-50 ">
+                <div class="container-card background-green">
+                      <div class="container-info wid-20">
+                        <i class="bi-tag icon-large color-green"></i>
+                      </div>
+                    <div class="container-info f-direction-collum wid-80">
+                      <p class="text-title font-hard color-green-background ">Desconto da proposta</p>
+                      <p class="text-title font-hard color-green" id="desconto-negociacao-proposta">0.0%</p>
+                    </div>
+                    </div>
+                  
+              </div>
+              
+            </div>
+          </article>
+          <article class="card-negociacao-pagamento">
+            <div class="header-card-container">
+                <i class="bi bi-wallet2 icon-header-card"></i>
+                <p class="text-small color-text-first">ETAPA 4</p>
+                <div class="wall-vertical hei-80 "></div>
+                <h3 class="text-title color-first">Forma de Pagamento</h3>
+            </div>
+            <div class="main-card-negociacao">
+              <div class="container-pay wid-50 f-direction-collum">
+                <div class="container-input">
+                  <label for="valor-pagamento-1" class="label color-text-first">Primeiro pagamento</label>
+                  <div class="container-input-general">
+                    <div class="container-icon">
+                      <i class="bi bi-piggy-bank text-title color-third"></i>
+                    </div>
+                    <input type="text" id="valor-pagamento-1" class="input-general" placeholder="Informe o valor de pagamento">
+                  </div>
+                </div>
+                <div class="container-input">
+                  <label for="forma-pagamento-1-negociacao" class="label color-text-first">Tipo de Pagamento </label>
+                  <div class="container-input-general">
+                    <div class="container-icon">
+                    <i class="bi bi-question-diamond text-title color-third"></i>
+                    </div>
+                    <select name="" id="forma-pagamento-1-negociacao" class="select-general">
+                      <option value="" class="opcao-select">Selecione</option>
+                      <option value="Á vista">Á vista</option>
+                      <option value="Cartão de Crédito">Cartão de Crédito</option>
+                      <option value="Financiamento">Financiamento</option>
+                      <option value="Boleto">Boleto</option> 
+                    </select>
+                  </div>
+                </div>
+                <div class="container-input" id="campoQtdParcelas1" >
+                  <label for="parcela-pagamento-1-negociacao" class="label color-text-first">Quantidade de Parcelas</label>
+                  <div class="container-input-general">
+                    <div class="container-icon">
+                    <i class="bi bi-receipt text-title color-third"></i>
+                    </div>
+                    <select name="" id="parcela-pagamento-1-negociacao" class="select-general">
+                      <option value="" class="opcao-select">Selecione</option>
+                      <option value="1">1</option>
+                       <option value="2">2</option>
+                        <option value="3">3</option>
+                         <option value="4">4</option>
+                          <option value="5">5</option>
+                           <option value="6">6</option>
+                            <option value="7">7</option>
+                             <option value="8">8</option>
+                              <option value="9">9</option>
+                               <option value="10">10</option>
+                                <option value="11">11</option>
+                                 <option value="12">12</option>
+                                  <option value="13">13</option>
+                                   <option value="14">14</option>
+                                    <option value="15">15</option>
+                                     <option value="16">16</option>
+                                      <option value="17">17</option>
+                                       <option value="18">18</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="wall-vertical hei-80"></div>
+              <div class="container-pay wid-50 f-direction-collum " id="container-pagamento-2">
+                <div class="container-input" id="campo-valor-pagamento">
+                  <p class="label color-text-first">Segundo pagamento</p>
+                  <div class="container-input-general">
+                    <div class="container-icon">
+                      <i class="bi bi-piggy-bank text-title color-third"></i>
+                    </div>
+                    <p id="valor-pagamento-2" class="text-gray text-high i"> Valor Restante</p>
+                  </div>
+                </div>
+                <div class="container-input" id="campo-tipo-pagamento">
+                  <label for="forma-pagamento-2-negociacao" class="label color-text-first">Tipo de Pagamento </label>
+                  <div class="container-input-general">
+                    <div class="container-icon">
+                    <i class="bi bi-question-diamond text-title color-third"></i>
+                    </div>
+                    <select name="" id="forma-pagamento-2-negociacao" class="select-general ">
+                      <option value="" class="opcao-select">Selecione</option>
+                      <option value="Á vista">Á vista</option>
+                      <option value="Cartão de Crédito">Cartão de Crédito</option>
+                      <option value="Financiamento">Financiamento</option>
+                      <option value="Boleto">Boleto</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="container-input" id="campoQtdParcelas2">
+                  <label for="parcela-pagamento-2-negociacao" class="label color-text-first">Quantidade de Parcelas</label>
+                  <div class="container-input-general">
+                    <div class="container-icon">
+                      <i class="bi bi-receipt text-title color-third"></i>
+                    </div>
+                    <select name="" id="parcela-pagamento-2-negociacao" class="select-general">
+                      <option value="" class="opcao-select">Selecione</option>
+                      <option value="1">1</option>
+                       <option value="2">2</option>
+                        <option value="3">3</option>
+                         <option value="4">4</option>
+                          <option value="5">5</option>
+                           <option value="6">6</option>
+                            <option value="7">7</option>
+                             <option value="8">8</option>
+                              <option value="9">9</option>
+                               <option value="10">10</option>
+                                <option value="11">11</option>
+                                 <option value="12">12</option>
+                                  <option value="13">13</option>
+                                   <option value="14">14</option>
+                                    <option value="15">15</option>
+                                     <option value="16">16</option>
+                                      <option value="17">17</option>
+                                       <option value="18">18</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="container-add flex-center hidden " id="container-campo-add">
+                <i class="bi bi-plus-circle icon-large color-third cursor-pointer " id="botao-add-pagamento-negociacao"></i>
+              </div>
+            </div>
+          </article>
+          <article class="card-negociacao-resultado">
+            <div class="header-card-container">
+                <i class="bi bi-graph-up-arrow icon-header-card"></i>
+                <p class="text-small color-text-first">ETAPA 5</p>
+                <div class="wall-vertical hei-80"></div>
+                <h3 class="text-title color-first">Resultado MCS</h3>
+            </div>
+            <div class="main-card-negociacao">
+              <div class="container-items wid-50">
+                <div class="container-card background-orange">
+                  <div class="container-icone-resultado">
+                    <i class="bi bi-activity icon-large color-orange"></i>
+                  </div>
+                  <div class="container-items-resultado">
+                    <h4 class="text-title color-orange">MCS</h4>
+                    <p class="text-title color-orange-background" id="mcs-negociacao">-</p>
+                  </div>
+                </div>
+              </div>
+              <div class="wall-vertical hei-60"></div>
+              <div class="container-items wid-50">
+                <div class="container-card background-gray" id="container-item-analise">
+                  <div class="container-info f-direction-collum">
+                    <i class="bi bi-emoji-expressionless icon-large color-text-first" id="icone-resultado-negociacao"></i>
+                  </div>
+                  <div class="container-info f-direction-collum">
+                    <h4 class="text-title font-hard color-text-first" id="titulo-resultado-negociacao">Resultado</h4>
+                    <p class="text-title color-text-first" id="texto-mcs-negociacao">Aguardando</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <div class="card-negociacao-resumo">
+            <div class="header-card-container">
+            <i class="bi bi-clipboard-check icon-header-card"></i>
+            <p class="text-small color-text-first">ETAPA FINAL</p>
+             <div class="wall-vertical hei-80"></div>
+            <h3 class="text-title color-first">Resumo da Proposta</h3>
+          </div>
+            <div class="container-main-resumo">
+              <div class="card-resumo-info">
+                    <i class="bi bi-person-badge text-title color-third"></i>
+                    <p class="text-normal color-text-first i">ID da Proposta</p>
+                    <p id="id-resumo-negociacao" class="text-normal color-first font-hard validar">-</p>
+                  
+                </div>
+                <div class="card-resumo-info">
+                    <i class="bi bi-cash text-title color-third"></i>
+                    <p class="text-normal color-text-first i">Valor da Proposta</p>
+                    <p id="valor-final-resumo-negociacao" class="text-normal color-first font-hard validar">-</p>
+                  
+                </div>
+                <div class="card-resumo-info">
+                    <i class="bi-tag text-title color-third"></i>
+                    <p class="text-normal color-text-first i">Desconto</p>
+                    <p id="desconto-resumo-negociacao" class="text-normal color-first font-hard validar">-</p>
+                  
+                </div>
+                <div class="card-resumo-info">
+                    <i class="bi bi-credit-card text-title color-third"></i>
+                    <p class="text-normal color-text-first i">Forma de Pagamento 1</p>
+                    <p id="forma-1-pagamento-resumo-negociacao" class="text-normal color-first font-hard validar">-</p>
+                  
+                </div>
+                <div class="card-resumo-info">
+                    <i class="bi bi-piggy-bank  text-title color-third"></i>
+                    <p class="text-normal color-text-first i">Valor</p>
+                    <p id="valor-1-resumo-negociacao" class="text-normal color-first font-hard validar">-</p>
+                  
+                </div>
+                      <div class="card-resumo-info">
+                    <i class="bi bi-receipt  text-title color-third"></i>
+                    <p class="text-normal color-text-first i">Quantidade de Parcelas</p>
+                    <p id="parcelas-1-resumo-negociacao" class="text-normal color-first font-hard validar">-</p>
+                  
+                </div>
+                <div class="card-resumo-info">
+                    <i class="bi bi-credit-card-2-back text-title color-third"></i>
+                    <p class="text-normal color-text-first i">Forma de Pagamento 2</p>
+                    <p id="forma-2-pagamento-resumo-negociacao" class="text-normal color-first font-hard validar">-</p>
+                  
+                </div>
+                <div class="card-resumo-info">
+                    <i class="bi bi-piggy-bank text-title color-third"></i>
+                    <p class="text-normal color-text-first i">Valor</p>
+                    <p id="valor-2-resumo-negociacao" class="text-normal color-first font-hard validar">-</p>
+                  
+                </div>
+                <div class="card-resumo-info">
+                    <i class="bi bi-receipt  text-title color-third"></i>
+                    <p class="text-normal color-text-first i">Quantidade de Parcelas</p>
+                    <p id="parcelas-2-resumo-negociacao" class="text-normal color-first font-hard validar">-</p>
+                  
+                </div>
+                <div class="card-resumo-info">
+                    <i class="bi bi-person-badge text-title color-third"></i>
+                    <p class="text-normal color-text-first i">MCS</p>
+                    <p id="mcs-resumo-negociacao" class="text-normal color-first font-hard validar">-</p>
+                  
+                </div>
+                <div class="card-resumo-info">
+                    <i class="bi bi-activity  text-title color-third"></i>
+                    <p class="text-normal color-text-first i">Resultado</p>
+                    <p id="resultado-mcs-resumo-negociacao" class="text-normal color-first font-hard validar">-</p>
+                  
+                </div>
+                <div class="card-resumo-info">
+                    <i class="bi bi-wallet2 text-title color-third"></i>
+                    <p class="text-normal color-text-first i">Valor Negociado</p>
+                    <p id="valor-negociado-resumo-negociacao" class="text-normal color-first font-hard validar">-</p>
+                  
+                </div>
+   
+             </div>  
+            <div class="container-footer f-direction-collum gap-med flex-center ">
+
+                        <div class="bt wid-80 gap-high background-third" id="btn-enviar-negociacao">
+                          <div class="container-icon">
+                            <i class="bi bi-suitcase-lg text-title color-white"></i>
+                          </div>
+                            <p class="text-large color-white font-hard">Finalizar Negociação</p>
+                        </div>
+                        <div class="container-text">
+                          <p class="text-normal color-first text-center">Conclua a negociação ou gere a proposta atualizada em PDF.</p>
+                          <p class="text-normal color-first text-center color-red hidden">Não foi possível continuar. Existem campos não preenchidos.</p>
+                          <p class="text-normal color-first text-center color-red hidden">Não foi possível continuar. Resultado reprovado, revise os valores.</p>
+
+                        </div>
+                        <div class="bt wid-80 gap-high background-border-first" id="btn-pdf-negociacao">
+                          <div class="container-icon">
+                            <i class="bi bi-filetype-pdf text-title color-first"></i>
+                          </div>
+                            <p class="text-large color-first font-hard">Gerar PDF com Negociação</p>
+                        </div>
+
+
+             </div>
+          </div>
+      </section>
+      <section class="screen-negociacao-pdf ">
+        <article class="card-negociacao-pdf-formulario">
+           
+        </article>
+        <article class="card-negociacao-pdf-dados f-direction-collum ">
+            
+              
+          
+        </article>
+      </section>
+
+      <section class="screen-lancamento  " id="section-lancamento">
           <article class="card-lancamento-cliente">
             <header class="header-card-container">
                 <i class="bi bi-people icon-header-card"></i>
@@ -677,13 +1030,13 @@
             </header>
             <div class="main-card gap-high">
                 <div class="container-input ">
-                  <div class="container-area-general f-direction-collum">
-                    <div class="container-items wid-100">
-                      <div class="container-items wid-50">
+                  <div class="container-area-general flex-between f-direction-collum">
+                    <div class=" flex-between wid-100 pad-8">
+                      <div class="flex-center gap-small">
                         <i class="bi bi-bricks text-title color-third"></i>
                         <p class="label text-title">Local em Obra</p>
                       </div>
-                      <div class="container-items wid-50">
+                      <div class="flex-center">
                       <label class="switch">
                         <input type="checkbox" class="swipeLocal">
                         <span class="slider "></span>
@@ -694,42 +1047,54 @@
                     </div>
                 </div>
                 <div class="container-input">
-                  <div class="container-area-general f-direction-collum">
-                     <div class="container-items wid-100 gap-high">
+                  <div class="container-area-general flex-between f-direction-collum">
+                    <div class=" flex-between wid-100 pad-8">
+                     <div class="flex-center gap-small">
                       <i class="bi bi-diamond-half text-title color-third"></i>
                       <p class="label text-title">Unificação de relógios</p>
-                      <label class="switch">
-                        <input type="checkbox" class="swipeUnificacao">
-                        <span class="slider"></span>
-                      </label>
+                      </div>
+                      <div class="flex-center">
+                        <label class="switch">
+                          <input type="checkbox" class="swipeUnificacao">
+                          <span class="slider"></span>
+                        </label>
+                      </div>
                       </div>
                         <textarea name="" id="textarea-unificacao" class="textarea-general hidden" placeholder="Observação"></textarea>
                       </div>
 
                 </div>
                 <div class="container-input">
-                  <div class="container-area-general f-direction-collum">
-                    <div class="container-items wid-100 gap-high">
-                    <i class="bi bi-exclude text-title color-third"></i>
-                      <p class="label color-first">Adequação</p>
-                      <label class="switch">
-                        <input type="checkbox" class="swipeAdequacao">
-                        <span class="slider"></span>
-                      </label>
+                  <div class="container-area-general flex-between f-direction-collum">
+                    <div class="flex-between wid-100 pad-8">
+                      <div class="flex-center gap-small">
+                        <i class="bi bi-exclude text-title color-third"></i>
+                        <p class="label color-first">Adequação</p>
+                      </div>
+                        <div class="flex-center">
+                        <label class="switch">
+                          <input type="checkbox" class="swipeAdequacao">
+                          <span class="slider"></span>
+                        </label>
+                        </div>
                       </div>
                        <textarea name="" id="textarea-adequacao" class="textarea-general hidden" placeholder="Observação"></textarea>
-
                     </div>
                 </div>
                 <div class="container-input">
-                  <div class="container-area-general f-direction-collum">
-                    <div class="container-items wid-100 gap-high">
+                  <div class="container-area-general flex-between f-direction-collum">
+                    <div class="flex-between wid-100 pad-8">
+                    <div class="flex-center gap-small">
                       <i class="bi bi-house-gear text-title color-third"></i>
                       <p class="label color-first">Reforma do Telhado</p>
+                      </div>
+                      <div class="flex-center">
                       <label class="switch">
                         <input type="checkbox" class="swipeReforma">
                         <span class="slider"></span>
                       </label>
+                      </div>
+
                       </div>
                       <textarea name="" id="textarea-reforma" class="textarea-general hidden" placeholder="Observação"></textarea>
                     </div>
@@ -737,28 +1102,36 @@
                 </div>
                 
                 <div class="container-input">
-                  <div class="container-area-general f-direction-collum">
-                    <div class="container-items wid-100 gap-high">
+                  <div class="container-area-general flex-between f-direction-collum">
+                    <div class="flex-between wid-100 pad-8">
+                    <div class="flex-center gap-small">
                       <i class="bi bi-hdd-network text-title color-third"></i>
                         <p class="label color-first">Embutido</p>
+                        </div>
+                        <div class="flex-center">
                         <label class="switch">
                           <input type="checkbox" class="swipeEmbutido">
                           <span class="slider"></span>
                         </label>
+                        </div>
                       </div>
-                                          <textarea name="" id="textarea-embutido" class="textarea-general hidden"placeholder="Observação" ></textarea>
+                      <textarea name="" id="textarea-embutido" class="textarea-general hidden"placeholder="Observação" ></textarea>
 
                     </div>
                 </div>
                 <div class="container-input">
                   <div class="container-area-general f-direction-collum">
-                    <div class="container-items wid-100 gap-high">
+                    <div class="flex-between wid-100 pad-8">
+                    <div class="flex-center gap-small">
                       <i class="bi-diagram-3 text-title color-third"></i>
                       <p class="label color-first">Rateio</p>
+                      </div>
+                      <div class="flex-center">
                       <label class="switch">
                         <input type="checkbox" class="swipeRateio">
                         <span class="slider"></span>
                       </label>
+                      </div>
                       </div>
                       <textarea name="" id="textarea-rateio" class="textarea-general hidden" placeholder="Observação"></textarea>
                     </div>
@@ -1105,376 +1478,9 @@
             
           </article>
       </section>
-      <section class="screen-negociacao  " id="section-negociacao">
-          <article class="card-negociacao-informacao">
-            <div class="header-card-container">
-                <i class="bi bi-info icon-header-card"></i>
-                <p class="text-small color-text-first">ETAPA 1</p>
-                <div class="wall-vertical hei-80"></div>
-                <h3 class="text-title color-first">Informação da Proposta</h3>
-            </div>
-            <div class="main-card-negociacao">
-              <div class="card-negociacao-valor">
-                  <i class="bi bi-person icon-title color-third text-title"></i>
-                  <p class="text-normal color-black">Cliente</p>
-                  <p class="text-large color-first font-hard" id="cliente-negociacao-proposta">-</p>
-                </div>
-                <div class="wall-vertical hei-60"></div>
-                <div class="card-negociacao-valor">
-                  <i class="bi bi-calendar icon-title color-third text-title"></i>
-                  <p class="text-normal color-black">Data</p>
-                  <p class="text-large color-first font-hard" id="data-negociacao-proposta">-</p>
-                </div>
-                <div class="wall-vertical hei-60"></div>
-                
-                <div class="card-negociacao-valor">
-                  <i class="bi bi-layers icon-title color-third text-title"></i>
-                  <p class="text-normal color-black">Placas</p>
-                  <p class="text-large color-first font-hard" id="placas-negociacao-proposta">-</p>
-                </div>
-                <div class="wall-vertical hei-60"></div>
-                <div class="card-negociacao-valor">
-                  <i class="bi bi-plug icon-title color-third text-title"></i>
-                  <p class="text-normal color-black">Inversor</p>
-                  <p class="text-large color-first font-hard" id="inversor-negociacao-proposta">-</p>
-                </div>
-                <div class="wall-vertical hei-60"></div>
-                <div class="card-negociacao-valor">
-                  <i class="bi bi-cash icon-title color-third text-title"></i>
-                  <p class="text-normal color-black">Valor da Proposta</p>
-                  <p class="text-large color-first font-hard"id="valor-final-negociacao-proposta">-</p>
-                </div>
-              </div>
-            </div>
-          </article>
-          <article class="card-negociacao-desconto">
-            <div class="header-card-container">
-                <i class="bi bi-suitcase-lg icon-header-card"></i>
-                <p class="text-small color-text-first">ETAPA 2</p>
-                <div class="wall-vertical hei-80"></div>
-                <h3 class="text-title color-first">Negociação</h3>
-            </div>
-            <div class="main-card-negociacao">
-              <div class="container-items wid-50 ">
-                <div class="container-input-general">
-                  <div class="container-icon">
-                    
-                    <i class="bi bi-wallet2 text-title color-third" ></i>
-                  </div>
-                  <input type="text" placeholder="Informe o novo valor negociado" class="input-general" id="valor-negociado-proposta">
-                  
-                </div>
-              </div>
-              <div class="wall-vertical hei-60"></div>
-              <div class="container-items wid-50 ">
-                <div class="container-card background-green">
-                      <div class="container-info wid-20">
-                        <i class="bi-tag icon-large color-green"></i>
-                      </div>
-                    <div class="container-info f-direction-collum wid-80">
-                      <p class="text-title font-hard color-green-background ">Desconto da proposta</p>
-                      <p class="text-title font-hard color-green" id="desconto-negociacao-proposta">0.0%</p>
-                    </div>
-                    </div>
-                  
-              </div>
-              
-            </div>
-          </article>
-          <article class="card-negociacao-pagamento">
-            <div class="header-card-container">
-                <i class="bi bi-wallet2 icon-header-card"></i>
-                <p class="text-small color-text-first">ETAPA 3</p>
-                <div class="wall-vertical hei-80 "></div>
-                <h3 class="text-title color-first">Forma de Pagamento</h3>
-            </div>
-            <div class="main-card-negociacao">
-              <div class="container-pay wid-50 f-direction-collum">
-                <div class="container-item gap-med f-direction-row align-self-left">
-                  <i class="bi bi-credit-card text-title color-third"></i>
-                  <p class="text-large font-hard color-first">Pagamento 1</p>
-                </div>
-                
-                <div class="container-input">
-                  <label for="valor-pagamento-1" class="label color-text-first">Primeiro pagamento</label>
-                  <div class="container-input-general">
-                    <div class="container-icon">
-                      <i class="bi bi-piggy-bank text-title color-third"></i>
-                    </div>
-                    <input type="text" id="valor-pagamento-1" class="input-general" placeholder="Ex.: R$ 2.500,00">
-                  </div>
-                </div>
-                <div class="container-input">
-                  <label for="forma-pagamento-1-negociacao" class="label color-text-first">Tipo de Pagamento </label>
-                  <div class="container-input-general">
-                    <div class="container-icon">
-                    <i class="bi bi-question-diamond text-title color-third"></i>
-                    </div>
-                    <select name="" id="forma-pagamento-1-negociacao" class="select-general ">
-                      <option value="" class="opcao-select">Selecione</option>
-                      <option value="Á vista">Á vista</option>
-                      <option value="Cartão de Crédito">Cartão de Crédito</option>
-                      <option value="Financiamento">Financiamento</option>
-
-                    </select>
-                  </div>
-                </div>
-                <div class="container-input" id="campoQtdParcelas1" >
-                  <label for="parcela-pagamento-1-negociacao" class="label color-text-first">Quantidade de Parcelas</label>
-                  <div class="container-input-general">
-                    <div class="container-icon">
-                    <i class="bi bi-receipt text-title color-third"></i>
-                    </div>
-                    <select name="" id="parcela-pagamento-1-negociacao" class="select-general">
-                      <option value="" class="opcao-select">Selecione</option>
-                      <option value="1">1</option>
-                       <option value="2">2</option>
-                        <option value="3">3</option>
-                         <option value="4">4</option>
-                          <option value="5">5</option>
-                           <option value="6">6</option>
-                            <option value="7">7</option>
-                             <option value="8">8</option>
-                              <option value="9">9</option>
-                               <option value="10">10</option>
-                                <option value="11">11</option>
-                                 <option value="12">12</option>
-                                  <option value="13">13</option>
-                                   <option value="14">14</option>
-                                    <option value="15">15</option>
-                                     <option value="16">16</option>
-                                      <option value="17">17</option>
-                                       <option value="18">18</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div class="wall-vertical hei-80"></div>
-              <div class="container-pay wid-50 f-direction-collum hidden" id="container-pagamento-2">
-                <div class="container-item gap-med f-direction-row align-self-left" id="campo-header-pagamento">
-                  <i class="bi bi-credit-card-2-back text-title color-third"></i>
-                  <h3 class="text-large font-hard color-first">Pagamento 2</h3>
-                </div>
-                <div class="container-input" id="campo-valor-pagamento">
-                  <label for="valor-pagamento-2" class="label color-text-first">Segundo pagamento</label>
-                  <div class="container-input-general">
-                    <div class="container-icon">
-                      <i class="bi bi-piggy-bank text-title color-third"></i>
-                    </div>
-                    <input type="text" id="valor-pagamento-2" class="input-general" placeholder="Valor restante">
-                  </div>
-                </div>
-                <div class="container-input" id="campo-tipo-pagamento">
-                  <label for="forma-pagamento-2-negociacao" class="label color-text-first">Tipo de Pagamento </label>
-                  <div class="container-input-general">
-                    <div class="container-icon">
-                    <i class="bi bi-question-diamond text-title color-third"></i>
-                    </div>
-                    <select name="" id="forma-pagamento-2-negociacao" class="select-general ">
-                      <option value="" class="opcao-select">Selecione</option>
-                      <option value="Á vista">Á vista</option>
-                      <option value="Cartão de Crédito">Cartão de Crédito</option>
-                      <option value="Financiamento">Financiamento</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="container-input" id="campoQtdParcelas2">
-                  <label for="parcela-pagamento-2-negociacao" class="label color-text-first">Quantidade de Parcelas</label>
-                  <div class="container-input-general">
-                    <div class="container-icon">
-                      <i class="bi bi-receipt text-title color-third"></i>
-                    </div>
-                    <select name="" id="parcela-pagamento-2-negociacao" class="select-general">
-                      <option value="" class="opcao-select">Selecione</option>
-                      <option value="1">1</option>
-                       <option value="2">2</option>
-                        <option value="3">3</option>
-                         <option value="4">4</option>
-                          <option value="5">5</option>
-                           <option value="6">6</option>
-                            <option value="7">7</option>
-                             <option value="8">8</option>
-                              <option value="9">9</option>
-                               <option value="10">10</option>
-                                <option value="11">11</option>
-                                 <option value="12">12</option>
-                                  <option value="13">13</option>
-                                   <option value="14">14</option>
-                                    <option value="15">15</option>
-                                     <option value="16">16</option>
-                                      <option value="17">17</option>
-                                       <option value="18">18</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div class="container-add flex-center " id="container-campo-add">
-                <i class="bi bi-plus-circle icon-large color-third cursor-pointer " id="botao-add-pagamento-negociacao"></i>
-              </div>
-            </div>
-          </article>
-          <article class="card-negociacao-resultado">
-            <div class="header-card-container">
-                <i class="bi bi-graph-up-arrow icon-header-card"></i>
-                <p class="text-small color-text-first">ETAPA 4</p>
-                <div class="wall-vertical hei-80"></div>
-                <h3 class="text-title color-first">Resultado da Análise</h3>
-            </div>
-            <div class="main-card-negociacao">
-              <div class="container-items wid-50">
-                <div class="container-card background-orange">
-                  <div class="container-icone-resultado">
-                    <i class="bi bi-activity icon-large color-orange"></i>
-                  </div>
-                  <div class="container-items-resultado">
-                    <h4 class="text-title color-orange">MCS</h4>
-                    <p class="text-title color-orange-background" id="mcs-negociacao">-</p>
-                  </div>
-                </div>
-              </div>
-              <div class="wall-vertical hei-60"></div>
-              <div class="container-items wid-50">
-                <div class="container-card background-gray " id="container-item-analise">
-                  <div class="container-info f-direction-collum">
-                    <i class="bi bi-emoji-expressionless icon-large color-text-first" id="icone-resultado-negociacao"></i>
-                  </div>
-                  <div class="container-info f-direction-collum">
-                    <h4 class="text-title font-hard color-text-first" id="titulo-resultado-negociacao">Resultado</h4>
-                    <p class="text-title color-text-first" id="texto-mcs-negociacao">Aguardando</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-          <div class="card-negociacao-resumo">
-            <div class="header-card-container">
-            <i class="bi bi-clipboard-check icon-header-card"></i>
-            <p class="text-small color-text-first">ETAPA FINAL</p>
-             <div class="wall-vertical hei-80"></div>
-            <h3 class="text-title color-first">Resumo da Proposta</h3>
-          </div>
-            <div class="container-main-resumo">
-              <div class="card-resumo-info">
-                    <i class="bi bi-person-badge text-title color-third"></i>
-                    <p class="text-normal color-text-first i">ID da Proposta</p>
-                    <p id="id-resumo-negociacao" class="text-normal color-first font-hard validar">-</p>
-                  
-                </div>
-                <div class="card-resumo-info">
-                    <i class="bi bi-cash text-title color-third"></i>
-                    <p class="text-normal color-text-first i">Valor da Proposta</p>
-                    <p id="valor-final-resumo-negociacao" class="text-normal color-first font-hard validar">-</p>
-                  
-                </div>
-                <div class="card-resumo-info">
-                    <i class="bi-tag text-title color-third"></i>
-                    <p class="text-normal color-text-first i">Desconto</p>
-                    <p id="desconto-resumo-negociacao" class="text-normal color-first font-hard validar">-</p>
-                  
-                </div>
-                <div class="card-resumo-info">
-                    <i class="bi bi-credit-card text-title color-third"></i>
-                    <p class="text-normal color-text-first i">Forma de Pagamento 1</p>
-                    <p id="forma-1-pagamento-resumo-negociacao" class="text-normal color-first font-hard validar">-</p>
-                  
-                </div>
-                <div class="card-resumo-info">
-                    <i class="bi bi-piggy-bank  text-title color-third"></i>
-                    <p class="text-normal color-text-first i">Valor</p>
-                    <p id="valor-1-resumo-negociacao" class="text-normal color-first font-hard validar">-</p>
-                  
-                </div>
-                      <div class="card-resumo-info">
-                    <i class="bi bi-receipt  text-title color-third"></i>
-                    <p class="text-normal color-text-first i">Quantidade de Parcelas</p>
-                    <p id="parcelas-1-resumo-negociacao" class="text-normal color-first font-hard validar">-</p>
-                  
-                </div>
-                <div class="card-resumo-info">
-                    <i class="bi bi-credit-card-2-back text-title color-third"></i>
-                    <p class="text-normal color-text-first i">Forma de Pagamento 2</p>
-                    <p id="forma-2-pagamento-resumo-negociacao" class="text-normal color-first font-hard validar">-</p>
-                  
-                </div>
-                <div class="card-resumo-info">
-                    <i class="bi bi-piggy-bank text-title color-third"></i>
-                    <p class="text-normal color-text-first i">Valor</p>
-                    <p id="valor-2-resumo-negociacao" class="text-normal color-first font-hard validar">-</p>
-                  
-                </div>
-                <div class="card-resumo-info">
-                    <i class="bi bi-receipt  text-title color-third"></i>
-                    <p class="text-normal color-text-first i">Quantidade de Parcelas</p>
-                    <p id="parcelas-2-resumo-negociacao" class="text-normal color-first font-hard validar">-</p>
-                  
-                </div>
-                <div class="card-resumo-info">
-                    <i class="bi bi-person-badge text-title color-third"></i>
-                    <p class="text-normal color-text-first i">MCS</p>
-                    <p id="mcs-resumo-negociacao" class="text-normal color-first font-hard validar">-</p>
-                  
-                </div>
-                <div class="card-resumo-info">
-                    <i class="bi bi-activity  text-title color-third"></i>
-                    <p class="text-normal color-text-first i">Resultado</p>
-                    <p id="resultado-mcs-resumo-negociacao" class="text-normal color-first font-hard validar">-</p>
-                  
-                </div>
-                <div class="card-resumo-info">
-                    <i class="bi bi-wallet2 text-title color-third"></i>
-                    <p class="text-normal color-text-first i">Valor Negociado</p>
-                    <p id="valor-negociado-resumo-negociacao" class="text-normal color-first font-hard validar">-</p>
-                  
-                </div>
-   
-             </div>  
-            <div class="container-footer f-direction-collum gap-med flex-center ">
-
-                        <div class="bt wid-80 gap-high background-third" id="btn-enviar-negociacao">
-                          <div class="container-icon">
-                            <i class="bi bi-suitcase-lg text-title color-white"></i>
-                          </div>
-                            <p class="text-large color-white font-hard">Finalizar Negociação</p>
-                        </div>
-                        <div class="container-text">
-                          <p class="text-normal color-first text-center">Conclua a negociação ou gere a proposta atualizada em PDF.</p>
-                        </div>
-                        <div class="bt wid-80 gap-high background-border-first" id="btn-pdf-negociacao">
-                          <div class="container-icon">
-                            <i class="bi bi-filetype-pdf text-title color-first"></i>
-                          </div>
-                            <p class="text-large color-first font-hard">Gerar PDF com Negociação</p>
-                        </div>
-
-
-             </div>
-          </div>
-          <div class="card-negociacao-dica-1">
-           
-            <p class="text-subtitle color-first"> <i class="bi bi-rocket-takeoff icone-dica-negociacao"></i> <b> Dica: </b>Confira as informações da proposta antes de iniciar a negociação. Todas as alterações realizadas serão refletidas na análise da margem e no resultado final. </p>
-          </div>
-          <div class="card-negociacao-dica-2">
-           
-            <p class="text-subtitle color-first"> <i class="bi bi-rocket-takeoff icone-dica-negociacao"></i> <b> Dica:</b> Informe o novo valor negociado com o cliente.  </p>
-            <p class="text-subtitle color-first">O sistema calculará automaticamente o desconto aplicado em relação ao valor original.</p>
-          </div>
-          <div class="card-negociacao-dica-3">
-           
-            <p class="text-subtitle color-first"> <i class="bi bi-rocket-takeoff icone-dica-negociacao"></i> <b> Dica:</b> Escolha a forma de pagamento desejada. Caso utilize duas formas de pagamento, informe o valor da primeira.</p>
-            <p class="text-subtitle color-first">O sistema calculará automaticamente o valor restante para a segunda e atualizará o MCS conforme as condições selecionadas.</p>
-          </div>
-          <div class="card-negociacao-dica-4">
-           
-            <p class="text-subtitle color-red"> <i class="bi bi-exclamation-diamond icone-dica-negociacao vermelho"></i> <b> Dica:</b> Caso o cliente escolha apenas uma forma de pagamento, o sistema recalculará os valores e registrará automaticamente o segundo pagamento como R$ 0,00.</p>
-          </div>
-          <div class="card-negociacao-dica-5">
-           
-            <p class="text-subtitle color-first"> <i class="bi bi-rocket-takeoff icone-dica-negociacao"></i> <b> Dica:</b> Após preencher todas as informações, o sistema calculará automaticamente o MCS e verificará se a negociação atende às regras comerciais.</p>
-          </div>
+      <section class="screen-historico " id="section-historico" > 
       </section>
-      <section class="screen-historico  " id="section-historico" > 
-      </section>
-      <section class="screen-proposta-pdf   " id="section-pdf">
+      <section class="screen-proposta-pdf " id="section-pdf">
         <div class="container-pdf">
           <section class="pg-pdf pg-capa-pdf">
             <div class="capa-pdf">
@@ -1793,14 +1799,40 @@
     </main>
     
   </section>
-  <script src="./js/plataforma/plataforma-carregar-dados.js"></script>
-  <script src="./js/plataforma/plataforma-funcoes.js"></script>
-  <script src="./js/plataforma/plataforma-funcoes-resumo.js"></script>
-  <script src="./js/plataforma/plataforma-navegacao.js"></script>
-  <script src="./js/plataforma/plataforma-gerar-proposta.js"></script>
-  <script src="./js/plataforma/plataforma-gerar-hsp.js"></script>
-  <script src="./js/plataforma/plataforma-formulario.js"></script>
-  <script src="./js/plataforma/plataforma-usuarios.js"></script>
+
+
+    <script src="./js/plataforma/plataforma-variaveis.js"></script>
+    <script src="./js/plataforma/plataforma-carregar-dados.js"></script>
+    <script src="./js/plataforma/plataforma-calcular-dados.js"></script>
+    <script src="./js/plataforma/plataforma-inserir-dados.js"></script>
+    <script src="./js/plataforma/plataforma-eventos.js"></script>
+
+    <script src="./js/plataforma/plataforma-atualizar-resumo.js"></script>
+    <script src="./js/plataforma/plataforma-botoes.js"></script>
+    <script src="./js/plataforma/plataforma-calcular-custos.js"></script>
+    
+    <script src="./js/plataforma/plataforma-enviar-dados.js"></script>
+    
+    <script src="./js/plataforma/plataforma-formatar-dados.js"></script>
+    <script src="./js/plataforma/plataforma-formulario.js"></script>
+    <script src="./js/plataforma/plataforma-gerar-dados.js"></script>
+    <script src="./js/plataforma/plataforma-gerar-hsp.js"></script>
+    <script src="./js/plataforma/plataforma-gerar-valores.js"></script>
+    <script src="./js/plataforma/plataforma-limpeza.js"></script>
+    <script src="./js/plataforma/plataforma-navegacao.js"></script>
+    <script src="./js/plataforma/plataforma-usuarios.js"></script>
+    <script src="./js/plataforma/plataforma-validacao.js"></script>
+    
+<script src="./js/Negociacao/negociacao-carregar-dados.js"></script>
+  <script src="./js/Negociacao/negociacao-variaveis.js"></script>
+  <script src="./js/Negociacao/negociacao-inserir-dados.js"></script>
+  <script src="./js/Negociacao/negociacao-atualizar-resumo.js"></script>
+  <script src="./js/Negociacao/negociacao-calcular-dados.js"></script>
+  <script src="./js/Negociacao/negociacao-enviar-dados.js"></script>
+  <script src="./js/Negociacao/negociacao-eventos.js"></script>
+  <script src="./js/Negociacao/negociacao-formulario.js"></script>
+  <script src="./js/Negociacao/negociacao-gerar-resumo.js"></script>
+
   <!--script para lancamento-->
   
   <script src="./js/lancamento/lancamento-funcoes.js"></script>
@@ -1808,14 +1840,17 @@
   <script src="./js/lancamento/lancamento-formulario.js"></script>
   <script src="./js/lancamento/lancamento-enviar-dados.js"></script>
   <script src="./js/lancamento/lancamento-validacao.js"></script>
+  <script src="./js/lancamento/lancamento-variaveis.js"></script>
+
   <!--script do PDF da proposta-->
   <script src="./js/Proposta/proposta-carregar-dados.js"></script>
   <script src="./js/Proposta/proposta-gerar-pdf.js"></script>
   <script src="./js/Proposta/proposta-navegacao.js"></script>
   <!--Script para negociação-->
-  <script src="./js/Negociacao/negociacao-gerar-resumo.js"></script>
-  <script src="./js/Negociacao/negociacao-enviar-dados.js"></script>
-  <script src="./js/Negociacao/negociacao-formulario.js"></script>
+ 
+  
+  
+
 
 </body>
 

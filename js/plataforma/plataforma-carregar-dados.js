@@ -1,3 +1,9 @@
+const contribuicao = 0.47
+const comissao = 0.05
+const impostos = 0.06
+const retorno = 1000
+const inflacao = 0.01
+
 
 async function solicitarIdllancamentoAtual() {
     const resposta = await fetch(
@@ -8,13 +14,13 @@ async function solicitarIdllancamentoAtual() {
         throw new Error("Erro ao consultar o ID atual.");
     }
 
-    const maiorID = await resposta.json();
+    const dadosSolicitados = await resposta.json();
 
-    console.log("ID recebido:", maiorID);
+    console.log("ID recebido:", dadosSolicitados);
 
-    localStorage.setItem('idAtualLancamento', maiorID);
+    localStorage.setItem('idAtualLancamento', dadosSolicitados);
 
-    return maiorID; // ESSENCIAL!
+    return dadosSolicitados; // ESSENCIAL!
 }
 solicitarIdllancamentoAtual()
 

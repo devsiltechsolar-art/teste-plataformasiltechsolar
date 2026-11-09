@@ -21,13 +21,12 @@ function carregarDadosLancamento(){
     resumoQuantidadePlaca.textContent = proposta.placas
     resumoInversor.textContent = proposta.inversor
     resumoSistema.textContent = proposta.sistema
-    resumoMcs.textContent = proposta.mcs
-    resumoValorNegociado.textContent = formatarMoeda(proposta.valorNegociado)
+    resumoMcs.textContent = negociacao. resultadoMcsNegociado.toFixed(1) + "%"
+    resumoValorNegociado.textContent = formatarMoeda(negociacao.valorNegociado)
     resumoTelhado.textContent = proposta.telhado
-
     resumoValorInicial.textContent = formatarMoeda(proposta.valorFinalProposta)
-    resumoDesconto.textContent = proposta.desconto.toFixed(1) + "%"
-    resumoFormaPagamento.textContent = proposta.formaDePagamento1
+    resumoDesconto.textContent = negociacao.desconto.toFixed(1) + "%"
+    resumoFormaPagamento.textContent = negociacao.tipoPagamento1
     resumoPromocao.textContent = proposta.promocao
 
 }
@@ -41,9 +40,9 @@ async function buscarCep(cep) {
 
     const resumoCep = document.getElementById('endereco-resumo-lancamento')
     const resumoRua = document.getElementById('rua-resumo-lancamento')
-        const resumoBairro = document.getElementById('bairro-resumo-lancamento')
-            const resumoCidade = document.getElementById('cidade-resumo-lancamento')
-                const resumoEstado = document.getElementById('estado-resumo-lancamento')
+    const resumoBairro = document.getElementById('bairro-resumo-lancamento')
+    const resumoCidade = document.getElementById('cidade-resumo-lancamento')
+    const resumoEstado = document.getElementById('estado-resumo-lancamento')
 
 
 

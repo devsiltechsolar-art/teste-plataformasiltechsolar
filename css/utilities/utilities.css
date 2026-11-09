@@ -26,6 +26,11 @@
     align-items: flex-start;
     justify-content: center;
 }
+.flex-between{
+    display:flex;
+    align-items: center;
+    justify-content: space-between
+}
 .wall-vertical {
 
    
@@ -92,6 +97,19 @@
 
     background-color: var(--color-red-light);
     border: 2px solid var(--color-red-dark);
+    border-radius: 4px;
+}
+
+.background-blue {
+
+    background-color: var(--color-blue-light);
+    border: 2px solid var(--color-blue-dark);
+    border-radius: 4px;
+}
+.background-yellow {
+
+    background-color: var(--color-yellow-light);
+    border: 2px solid var(--color-yellow-dark);
     border-radius: 4px;
 }
 

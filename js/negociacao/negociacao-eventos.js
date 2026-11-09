@@ -1,0 +1,17 @@
+const valorNegociado = document.getElementById('valor-negociado-proposta')
+const pagamento1 = document.getElementById('valor-pagamento-1')
+const tipoPagamento1 = document.getElementById('forma-pagamento-1-negociacao')
+const parcelas1 = document.getElementById('parcela-pagamento-1-negociacao')
+const pagamento2 = document.getElementById('valor-pagamento-2')
+const tipoPagamento2 = document.getElementById('forma-pagamento-2-negociacao')
+const parcelas2 = document.getElementById('parcela-pagamento-2-negociacao')
+const autorizarNegociacao = document.getElementById('autorizar-negociacao')
+
+valorNegociado.addEventListener('input',calcularDadosNegociacao)
+pagamento1.addEventListener('input',calcularDadosNegociacao)
+tipoPagamento1.addEventListener('change',calcularDadosNegociacao)
+parcelas1.addEventListener('input',calcularDadosNegociacao)
+pagamento2.addEventListener('input',calcularDadosNegociacao)
+tipoPagamento2.addEventListener('change',calcularDadosNegociacao)
+parcelas2.addEventListener('input',calcularDadosNegociacao)
+

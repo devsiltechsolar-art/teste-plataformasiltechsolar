@@ -4,6 +4,7 @@ campoNomeLancamento.addEventListener('input', () =>{
 
   attResumoNomeLancamento()
   limparCamposLancamento()
+  console.log(lancamento)
 })
 
 const campoCpfLancamento = document.getElementById('input-cpf-lancamento')
